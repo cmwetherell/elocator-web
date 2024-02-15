@@ -14,18 +14,25 @@ export default function Home() {
       <p className= "w-3/4">
         Elocator is a tool that calculates the complexity of a given chess position. It does this by
         analyzing the position and assigning a score from 1 to 10, with 1 being the least complex and
-        10 being the most complex. The score is based on the number of legal moves available to the
-        player whose turn it is to move. The more moves available, the more complex the position.
+        10 being the most complex.
       <br></br>
       <br></br>
-        I started by creating a dataset of FENs mapped to centipawn loss from a GM that made a move in that position (classical OTB games only).
-        Underlying this tool is a neural network model (AI, deep learning, yada yada) that has been trained on 100,000 chess moves made by grandmasters.
-        The model has learned to predict the complexity of a position by learning the expected centipawn loss of a move as measured by Stockfish at depth 20.
+        I created a dataset of FENs mapped to the loss in <a className = "text-green-500" href="https://lichess.org/page/accuracy">Win %</a> from a GM that made a move in that position (classical OTB games only).
+        Underlying this tool is a neural network (AI, deep learning, yada yada) that has been trained on 100,000 chess moves made by grandmasters.
+        The model has learned to predict the complexity of a position by learning the expected change in Win % after a move is made, as measured by Stockfish 16 at depth 20.
       <br></br>
       <br></br>
         The model is then used to predict the complexity of a given position. The model is not perfect, but it is a good starting point for understanding the complexity of a position.
         I look forward to making it better over time. Soon, I will publish some analytics around model performance.
-        
+
+        In the immediate future, I have a few goals:<br></br>
+        1. Make the complexity model much better (incorporate a larger training dataset, a better NN  structure, e.g. HalfKA)<br></br>
+        2. Find a mechanism to turn the complexity score into game evaluations<br></br>
+        3. Find a mechanism to turn a series of games into a "tournament score".<br></br>
+        4. Find a mechanism to identify outliers beyond some percentile (e.g., to identify cheating).<br></br>
+        <br></br>
+        Longer term, I view this as an opportunity for the chess community to develop "open source cheating detection", among other things.
+        <br></br><br></br>
         You can learn more about the model and the dataset by visiting the <a className = "text-green-500" href="https://github.com/cmwetherell/elocator">Elocator GitHub repository</a>.
       </p>
     </main>
