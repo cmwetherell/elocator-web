@@ -19,7 +19,12 @@ interface SquareProps {
   
     return (
       <div style={style}>
-        {piece && <img src={`/img/chesspieces/${piece}.png`} alt={piece} />}
+        {piece && <Image 
+        src={`/img/chesspieces/${piece}.png`}
+        alt={piece}
+        width = {50}
+        height = {50}
+        />}
       </div>
     );
   };
