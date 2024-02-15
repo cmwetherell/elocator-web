@@ -28,10 +28,10 @@ export default function Home() {
         In the immediate future, I have a few goals:<br></br>
         1. Make the complexity model much better (incorporate a larger training dataset, a better NN  structure, e.g. HalfKA)<br></br>
         2. Find a mechanism to turn the complexity score into game evaluations<br></br>
-        3. Find a mechanism to turn a series of games into a "tournament score".<br></br>
+        3. Find a mechanism to turn a series of games into a tournament score.<br></br>
         4. Find a mechanism to identify outliers beyond some percentile (e.g., to identify cheating).<br></br>
         <br></br>
-        Longer term, I view this as an opportunity for the chess community to develop "open source cheating detection", among other things.
+        Longer term, I view this as an opportunity for the chess community to develop open source cheating detection, among other things.
         <br></br><br></br>
         You can learn more about the model and the dataset by visiting the <a className = "text-green-500" href="https://github.com/cmwetherell/elocator">Elocator GitHub repository</a>.
       </p>
