@@ -24,6 +24,13 @@ export default function Home() {
       <br></br>
         The model is then used to predict the complexity of a given position. The model is not perfect, but it is a good starting point for understanding the complexity of a position.
         I look forward to making it better over time. Soon, I will publish some analytics around model performance.
+        <br></br><br></br>
+        Some example FENs:
+        <br></br>
+        Low Complexity: r1bqkbnr/pppp1ppp/2n5/4p3/2B1P3/5N2/PPPP1PPP/RNBQK2R b KQkq - 3 3<br></br>
+        Medium Complexity: 4rk2/ppp1qppp/3p2R1/8/4P3/2Q1R2P/PPP2PP1/6K1 b - - 0 1<br></br>
+        High Complexity: 2kr3r/ppqb4/3p1b1p/2pPnpp1/NPP1p1nP/6PB/PB2PPN1/2RQ1RK1 w - - 0 1<br></br>
+        <br></br>
 
         In the immediate future, I have a few goals:<br></br>
         1. Make the complexity model much better (incorporate a larger training dataset, a better NN  structure, e.g. HalfKA)<br></br>
