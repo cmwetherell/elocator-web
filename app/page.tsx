@@ -7,7 +7,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <title>Elocator: Chess Complexity Calculator</title>
       <p className="text-4xl font-bold">Elocator: Chess Complexity Calculator</p>
-      <p className="text-2xl font-bold">Enter the FEN you'd like to analyze below.</p>
+      <p className="text-2xl font-bold">Enter the FEN youd like to analyze below.</p>
       <ChessBoardManager />
       <br></br>
       <p className="text-2xl font-bold">What is this? How does it work?</p>
@@ -18,7 +18,7 @@ export default function Home() {
         player whose turn it is to move. The more moves available, the more complex the position.
       <br></br>
       <br></br>
-        I started by creating a dataset of FEN's mapped to centipawn loss from a GM that made a move in that position (classical OTB games only).
+        I started by creating a dataset of FENs mapped to centipawn loss from a GM that made a move in that position (classical OTB games only).
         Underlying this tool is a neural network model (AI, deep learning, yada yada) that has been trained on 100,000 chess moves made by grandmasters.
         The model has learned to predict the complexity of a position by learning the expected centipawn loss of a move as measured by Stockfish at depth 20.
       <br></br>
