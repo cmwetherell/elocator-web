@@ -50,28 +50,32 @@ const ChessBoardManager: React.FC = () => {
 
   return (
     <>
-    <input
-    className="w-1/2 h-12 p-4 rounded-lg border-2 border-gray-300 text-black "
-    type="text"
-    placeholder="FEN"
-    id="fenInput"
-    defaultValue={""}
-    />
+      <input
+      className="w-1/2 h-12 p-4 rounded-lg border-2 border-gray-300 text-black "
+      type="text"
+      placeholder="FEN"
+      id="fenInput"
+      defaultValue={""}
+      />
       <button className="bg-green-700 hover:bg-green-800 text-white font-bold py-4 px-4 rounded mt-3 mb-3"
-       onClick={updateBoard} style={{ padding: '5px 10px' }}>Get Complexity
-       </button>
-       <ChessBoard fen={fen} />
-       
-             <div id="complexityScore" style={{ marginTop: '10px' }}>
-            {complexityScore !== null ? (
-              <>
-                Complexity Score: {complexityScore}
-                <ComplexityBar score={Number(complexityScore)} />
-              </>
-            ) : (
-              'Complexity score not available'
-            )}
-          </div>
+        onClick={updateBoard} style={{ padding: '5px 10px' }}>Get Complexity
+      </button>
+      <ChessBoard fen={fen} />
+        
+      <div id="complexityScore" style={{ marginTop: '10px' }}>
+        {complexityScore !== null ? (
+          <>
+            Complexity Score: {complexityScore}
+            <ComplexityBar score={Number(complexityScore)} />
+          </>
+        ) : (
+          'Complexity score not available'
+        )}
+      </div>
+
+      <div>
+        Current FEN: {fen}
+      </div>
     </>
   );
 };

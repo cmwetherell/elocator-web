@@ -17,6 +17,16 @@ export default function Home() {
         10 being the most complex.
       <br></br>
       <br></br>
+      How can we define the complexity of a chess position? There are many ways to do this, but I have chosen to define complexity as the expected change in Win % after a move is made.
+      Imagine a position where white has a +1 advantage from Stockfish. That implies a 59% win rate for white. Assuming Stockfish is perfect, a human can only play a move that is as good or worse than Stockfish (i.e., a move that does not increase the win rate for white).
+      We know that after the next move is played, white will have a 59% or lower chance of winning.
+      <br></br>
+      <br></br>
+      Depending on the position a grandmaster may find the best move, or maybe it's a really difficult position to find the best move.
+      Over a large enough dataset, we can make correlations between the state of the board, and how much we expect the win % to go down after a move is made. As an example, over 20,000 moves, my data shows that a GM is expected to lose 1.4% win rate after a move is made in a position with
+       a queen on the board, compared to 1.3% if there is no queen. So positions are about 7% more complex when there is a queen (1.4/1.3).
+      <br></br>
+      <br></br>
         I created a dataset of FENs mapped to the loss in <a className = "text-green-500" href="https://lichess.org/page/accuracy">Win %</a> from a GM that made a move in that position (classical OTB games only).
         Underlying this tool is a neural network (AI, deep learning, yada yada) that has been trained on 100,000 chess moves made by grandmasters.
         The model has learned to predict the complexity of a position by learning the expected change in Win % after a move is made, as measured by Stockfish 16 at depth 20.
