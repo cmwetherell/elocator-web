@@ -22,7 +22,7 @@ export default function Home() {
       We know that after the next move is played, white will have a 59% or lower chance of winning.
       <br></br>
       <br></br>
-      Depending on the position a grandmaster may find the best move, or maybe it's a really difficult position to find the best move.
+      Depending on the position a grandmaster may find the best move, or maybe it is a really difficult position to find the best move.
       Over a large enough dataset, we can make correlations between the state of the board, and how much we expect the win % to go down after a move is made. As an example, over 20,000 moves, my data shows that a GM is expected to lose 1.4% win rate after a move is made in a position with
        a queen on the board, compared to 1.3% if there is no queen. So positions are about 7% more complex when there is a queen (1.4/1.3).
       <br></br>
