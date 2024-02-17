@@ -7,6 +7,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <title>Elocator: Chess Complexity Calculator</title>
       <p className="text-4xl font-bold">Elocator: Chess Complexity Calculator</p>
+      <a href="/analyze-game" className="text-lg mt-4">Game Complexity and Analysis</a>
       <p className="text-2xl font-bold">Enter the FEN youd like to analyze below.</p>
       <ChessBoardManager />
       <br></br>
