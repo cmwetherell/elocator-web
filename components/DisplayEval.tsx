@@ -57,7 +57,7 @@ const DisplayEval: React.FC<DisplayEvalProps> = ({ positionAnalysis }) => {
         </LineChart>
       </ResponsiveContainer>
 
-      <h2>White's Position Complexity</h2>
+      <h2>White Position Complexity</h2>
       <ResponsiveContainer width="100%" height={300}>
         <LineChart data={dataForWhite} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
           <CartesianGrid strokeDasharray="3 3" />
@@ -69,7 +69,7 @@ const DisplayEval: React.FC<DisplayEvalProps> = ({ positionAnalysis }) => {
         </LineChart>
       </ResponsiveContainer>
 
-      <h2>Black's Position Complexity</h2>
+      <h2>Black Position Complexity</h2>
       <ResponsiveContainer width="100%" height={300}>
         <LineChart data={dataForBlack} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
           <CartesianGrid strokeDasharray="3 3" />
