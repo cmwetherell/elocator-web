@@ -1,6 +1,8 @@
 'use client';
 import React, { useState } from 'react';
 import ChessBoard from "./ChessBoard";
+import DisplayEval from './DisplayEval';
+
 
 interface GameHeaders {
     event?: string;
@@ -14,8 +16,8 @@ interface GameHeaders {
 
 interface PositionAnalysis {
     fen: string;
-    complexity: string;
-    evaluation: string;
+    complexity: number;
+    evaluation: number;
 }
 
 interface GameAnalysisResponse {
@@ -97,6 +99,8 @@ const AnalyzeGame: React.FC = () => {
                 Complexity Score: {analysisData?.positionAnalysis[currentIndex]?.complexity || "N/A"}<br />
                 Position Evaluation: {analysisData?.positionAnalysis[currentIndex]?.evaluation || "N/A"}
             </div>
+            {analysisData && <DisplayEval positionAnalysis={analysisData.positionAnalysis} />}
+
         </>
     );
 }
