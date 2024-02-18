@@ -81,8 +81,8 @@ const DisplayEval: React.FC<DisplayEvalProps> = ({ positionAnalysis }) => {
         </LineChart>
       </ResponsiveContainer>
       <div>
-        <h3>White's Average Complexity: {whiteGameComplexityAvg.toFixed(2)}</h3>
-        <h3>Black's Average Complexity: {blackGameComplexityAvg.toFixed(2)}</h3>
+        <h3>White Average Complexity: {whiteGameComplexityAvg.toFixed(2)}</h3>
+        <h3>Black Average Complexity: {blackGameComplexityAvg.toFixed(2)}</h3>
       </div>
     
       
